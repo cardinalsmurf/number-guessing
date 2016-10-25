@@ -37,12 +37,17 @@
   <p class="lastResult"></p>
   <p class="lowOrHi"></p>
 </div>
+    
+    <div>
+      <p class="debug">debug: <p>
+    </div>
 
 </body>
 
 <script>
   // Your JavaScript goes here
   var randomNumber = Math.floor(Math.random() * 100) + 1;
+  document.querySelect('.debug').textContent += randomNumber;
   
   var guess = document.querySelector('.guesses');
   var lastResult = document.querySelector('.lastResult');
