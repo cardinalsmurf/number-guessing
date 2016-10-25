@@ -55,7 +55,35 @@
   var resetButton;
   
   function checkGuess() {
-    alert('Im a placeholder.');
+   var userGuess = Number(guessField.value);
+    if (guessCount === 1) {
+      guesses.textContent = 'Previous guesses: ';
+    }
+    
+    guesses.textContent += userGues + ' ';
+    
+    if (userGuess === randomNumber) {
+      lastResult.textContent = 'Congratulations!  You got it right!';
+      lastResult.style.backgroundColor = 'green';
+      lowOrHi.textContent = '';
+      setGameOver();
+    } else if (guessCount === 10) {
+      lastResult.textContent = '!!!Game Over!!!';
+      setGameOver();
+    } else {
+      lastResult.textContent = 'Wrong!';
+      lastResult.style.backgroundColor = 'red';
+      if (userGuess < randomNumber) {
+        lowOrHi.textContent = 'Too low!';
+      } else if userGuess > randomNumber) {
+        lowOrHi.textContent = 'Too high!';
+      }
+    }
+    
+    guessCount++;
+    guessField.value = '';
+    guessField.focus();
+  }
   }
   
 </script>
