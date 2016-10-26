@@ -88,6 +88,11 @@
       guessField.value = '';
       guessField.focus();
     }
-    guessSubmit.addEventListener('click', checkGuess);
+    
+    function testButton() {
+      alert('clicked');
+    }
+    
+    guessSubmit.addEventListener('click', testButton);
   </script>
 </html>
