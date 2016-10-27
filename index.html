@@ -47,7 +47,7 @@
   <script>
     // Your JavaScript goes here
     var randomNumber = Math.floor(Math.random() * 100) + 1;
-    document.querySelector('.debug').textContent += randomNumber;
+    console.log("DEBUG: current number: " + randomNumber);
 
     var guesses = document.querySelector('.guesses');
     var lastResult = document.querySelector('.lastResult');
@@ -117,6 +117,7 @@
       lastResult.style.backgroundColor = 'white';
       
       randomNumber = Math.floor(Math.random() * 100) + 1;
+      console.log("DEBUG: current number: " + randomNumber);
     }
   </script>
 </html>
